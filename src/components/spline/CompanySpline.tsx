@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Application } from '@splinetool/runtime';
 
-export default function SplineViewer() {
+export default function CompanySpline() {
   useEffect(() => {
     const canvas = document.getElementById('canvas3d') as HTMLCanvasElement;
     if (!canvas) return;
@@ -11,7 +11,7 @@ export default function SplineViewer() {
   }, []);
 
   return (
-    <canvas id="canvas3d"    className="w-screen  sm:h-[80vh] h-full block" />
+    <canvas id="canvas3d"  className="w-screen  sm:h-[80vh] h-full block" />
   );
 }
 

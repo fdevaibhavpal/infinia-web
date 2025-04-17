@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import techFirm from '../../public/assets/tech-firm-wave.svg';
+import ContactSpline from './spline/ContactSpline';
 ---
 
 <section class="bg-black text-white py-20 relative">
@@ -38,12 +39,15 @@ import techFirm from '../../public/assets/tech-firm-wave.svg';
       </div>
     </div>
   
-    <div class="relative bottom-0 left-0 w-full">
+    <div class="w-full overflow-hidden">
+      <ContactSpline client:only="react"  />
+    </div>
+    <!-- <div class="relative bottom-0 left-0 w-full">
       <Image 
         src={techFirm} 
         alt="Decorative wave" 
         class="w-full h-auto"
         format="svg"
       />
-    </div>
+    </div> -->
   </section>
