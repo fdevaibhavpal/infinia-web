@@ -6,17 +6,19 @@ type LazySplineLoaderProps = {
   splineUrl: string;
   canvasId?: string;
   className?: string;
+  priority?: boolean; 
 };
 
-export default function LazySplineLoader({ splineUrl, canvasId, className = 'w-full h-full' }: LazySplineLoaderProps) {
-  const { ref, isInView } = useInView({ rootMargin: '200px', threshold: 0.2 });
+export default function LazySplineLoader({ splineUrl, canvasId, className = 'w-full h-full',priority = false  }: LazySplineLoaderProps) {
+  const { ref, isInView } = useInView({ rootMargin: '200px', threshold: 0.1 });
   const [app, setApp] = useState<Application | null>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   useEffect(() => {
     let application: Application;
+    const shouldLoad = priority || isInView;
 
-    if (isInView && ref.current) {
+    if (shouldLoad && ref.current) {
       if (!canvasRef.current) {
         const canvas = document.createElement('canvas');
         canvas.className = 'w-full h-full block ';
@@ -41,11 +43,11 @@ export default function LazySplineLoader({ splineUrl, canvasId, className = 'w-f
         }
       }
     }
-  }, [isInView, splineUrl, canvasId, ref]);
+  }, [isInView,priority, splineUrl, canvasId, ref]);
 
   return (
     <div ref={ref} className={`relative overflow-hidden ${className}`}>
-      {/* Canvas will be inserted here */}
+     
     </div>
   );
 }

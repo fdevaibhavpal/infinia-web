@@ -11,7 +11,7 @@ import LazySplineLoader from './spline/LazySplineLoader.astro';
   <div class="w-full h-full overflow-hidden">
     <!-- <HeroSpline client:only="react" /> -->
     <!-- <LazySpline splineUrl="https://prod.spline.design/cdtnukmPpFdeLtoF/scene.splinecode" /> -->
-    <LazySplineLoader splineUrl="https://prod.spline.design/cdtnukmPpFdeLtoF/scene.splinecode" className="w-full h-full " />
+    <LazySplineLoader splineUrl="https://prod.spline.design/cdtnukmPpFdeLtoF/scene.splinecode" className="w-full h-full " priority={true} />
 
     <!-- <spline-viewer url="https://prod.spline.design/cdtnukmPpFdeLtoF/scene.splinecode"></spline-viewer> -->
   </div>
