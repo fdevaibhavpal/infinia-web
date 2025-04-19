@@ -1,6 +1,7 @@
 ---
 import LazySpline from './LazySpline.astro';
 import HeroSpline from './spline/HeroSpline';
+import LazySplineLoader from './spline/LazySplineLoader.astro';
 ---
 
 <section>
@@ -9,7 +10,8 @@ import HeroSpline from './spline/HeroSpline';
   >
   <div class="w-full h-full overflow-hidden">
     <!-- <HeroSpline client:only="react" /> -->
-    <LazySpline splineUrl="https://prod.spline.design/cdtnukmPpFdeLtoF/scene.splinecode" />
+    <!-- <LazySpline splineUrl="https://prod.spline.design/cdtnukmPpFdeLtoF/scene.splinecode" /> -->
+    <LazySplineLoader splineUrl="https://prod.spline.design/cdtnukmPpFdeLtoF/scene.splinecode" className="w-full h-full " />
 
     <!-- <spline-viewer url="https://prod.spline.design/cdtnukmPpFdeLtoF/scene.splinecode"></spline-viewer> -->
   </div>

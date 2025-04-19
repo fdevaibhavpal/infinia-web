@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import HealthcareImage from '../../public/assets/healthcare.svg';
 import LazySpline from './LazySpline.astro';
+import LazySplineLoader from './spline/LazySplineLoader.astro';
 ---
 
 
@@ -18,7 +19,9 @@ import LazySpline from './LazySpline.astro';
       
       <div class="w-full lg:w-1/2 relative">
         <div class="relative w-full aspect-square  overflow-hidden">
-          <LazySpline splineUrl="https://prod.spline.design/4lP3sSHEY4UwWOQd/scene.splinecode" />
+          <!-- <LazySpline splineUrl="https://prod.spline.design/4lP3sSHEY4UwWOQd/scene.splinecode" /> -->
+          <LazySplineLoader splineUrl="https://prod.spline.design/4lP3sSHEY4UwWOQd/scene.splinecode" className="w-full h-full " />
+
           <!-- <spline-viewer
             url="https://prod.spline.design/4lP3sSHEY4UwWOQd/scene.splinecode"
             class="w-full h-full "

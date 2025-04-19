@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import techFirm from '../../public/assets/tech-firm-wave.svg';
 import ContactSpline from './spline/ContactSpline';
+import LazySplineLoader from './spline/LazySplineLoader.astro';
 ---
 
 <section class="bg-black text-white py-20 relative">
@@ -41,7 +42,7 @@ import ContactSpline from './spline/ContactSpline';
   
     <div class="w-full h-[400px] overflow-hidden">
       <!-- <ContactSpline client:only="react"  /> -->
-       
-      <spline-viewer url="https://prod.spline.design/H-GRvrVsdEQpn8lz/scene.splinecode" ></spline-viewer> 
+      <LazySplineLoader splineUrl="https://prod.spline.design/H-GRvrVsdEQpn8lz/scene.splinecode" className="w-full h-full " />
+      <!-- <spline-viewer url="https://prod.spline.design/H-GRvrVsdEQpn8lz/scene.splinecode" ></spline-viewer>  -->
     </div>
   </section>
