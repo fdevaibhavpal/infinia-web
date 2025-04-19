@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
-/* #dev-bar-hitbox-above{
-    display: none;
-} */
+
+html {
+    scroll-behavior: smooth;
+  }
+  

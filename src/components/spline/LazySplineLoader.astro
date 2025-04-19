@@ -1,0 +1,6 @@
+---
+import LazySpline from './LazySplineLoader';
+const { splineUrl, className } = Astro.props;
+---
+
+<LazySpline client:only="react" splineUrl={splineUrl} className={className} />

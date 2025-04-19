@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import BlockChainImage from '../../public/assets/blockchain.svg';
+import LazySpline from './LazySpline.astro';
 ---
 
 <section class="bg-black text-white py-6 lg:py-12 overflow-hidden">
@@ -19,11 +20,12 @@ import BlockChainImage from '../../public/assets/blockchain.svg';
 
       <div class="w-full lg:w-1/2 relative">
         <div class="relative w-full aspect-square  overflow-hidden">
-          <spline-viewer
+          <LazySpline splineUrl="https://prod.spline.design/3HYlOsQbKFoFelr3/scene.splinecode" />
+          <!-- <spline-viewer
             url="https://prod.spline.design/3HYlOsQbKFoFelr3/scene.splinecode"
             class="w-full h-full "
            
-          ></spline-viewer>
+          ></spline-viewer> -->
         </div>
       </div>
     </div>

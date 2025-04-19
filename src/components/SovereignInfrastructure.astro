@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import earthImage from '../../public/assets/earth.svg';
+import LazySpline from './LazySpline.astro';
 ---
 
 <section class="bg-black text-white py-6 lg:py-12 overflow-hidden">
@@ -18,13 +19,16 @@ import earthImage from '../../public/assets/earth.svg';
       
       <div class="w-full lg:w-1/2 relative">
         <div class="relative w-full aspect-square overflow-hidden">
-          <spline-viewer
+          <LazySpline splineUrl="https://prod.spline.design/LEfqtCvUyXFuhrhp/scene.splinecode" />
+
+          <!-- <spline-viewer
             url="https://prod.spline.design/LEfqtCvUyXFuhrhp/scene.splinecode"
             class="w-full h-full"
-          ></spline-viewer>
+          ></spline-viewer> -->
           <!-- <div class="absolute inset-0 rounded-full bg-blue-500 opacity-20 blur-3xl -z-10"></div> -->
         </div>
       </div>
     </div>
   </div>
 </section>
+

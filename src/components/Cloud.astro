@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import CloudImage from '../../public/assets/cloud.svg';
+import LazySpline from './LazySpline.astro';
 ---
 <section class="bg-black text-white py-6 lg:py-12 overflow-hidden">
   <div class="w-full mx-auto px-8 lg:px-12">
@@ -15,10 +16,12 @@ import CloudImage from '../../public/assets/cloud.svg';
       
       <div class="w-full lg:w-1/2 relative">
         <div class="relative w-full aspect-square  overflow-hidden">
-          <spline-viewer
+          <LazySpline splineUrl="https://prod.spline.design/ScgXJVmwTsyyKDfz/scene.splinecode" />
+          <!-- <spline-viewer
             url="https://prod.spline.design/ScgXJVmwTsyyKDfz/scene.splinecode"
             class="w-full h-full "
-          ></spline-viewer>
+          ></spline-viewer> -->
+          
         </div>
       </div>
     </div>

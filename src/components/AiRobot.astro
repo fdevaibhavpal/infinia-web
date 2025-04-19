@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import aiRobot from "../../public/assets/ai-robot.svg";
+import LazySpline from "./LazySpline.astro";
 ---
 
 <section class="bg-black text-white py-6 lg:py-12 overflow-hidden">
@@ -20,11 +21,13 @@ import aiRobot from "../../public/assets/ai-robot.svg";
 
       <div class="w-full lg:w-1/2 relative">
         <div class="relative w-full aspect-square  overflow-hidden">
-          <spline-viewer
+          <LazySpline splineUrl="https://prod.spline.design/J3SPthzRmtIw56JY/scene.splinecode" />
+
+          <!-- <spline-viewer
             url="https://prod.spline.design/J3SPthzRmtIw56JY/scene.splinecode"
             class="w-full h-full "
            
-          ></spline-viewer>
+          ></spline-viewer> -->
           <!-- <div class="absolute inset-0 rounded-full bg-blue-500 opacity-20 blur-3xl -z-10"></div> -->
         </div>
       </div>

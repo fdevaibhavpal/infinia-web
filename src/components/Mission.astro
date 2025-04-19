@@ -1,11 +1,18 @@
 ---
+import LazySpline from "./LazySpline.astro";
+import LazySplineLoader from "./spline/LazySplineLoader.astro";
 import MissionSpline from "./spline/MissionSpline";
 ---
 
 <section>
   <section class="w-full bg-black text-white">
-    <div class="w-full overflow-hidden">
-      <MissionSpline client:only="react"  />
+    <div class="relative w-full  overflow-hidden">
+      <!-- <LazySpline
+        splineUrl="https://prod.spline.design/OYEb4QkljWEC7fkh/scene.splinecode"
+      /> -->
+      <LazySplineLoader splineUrl="https://prod.spline.design/OYEb4QkljWEC7fkh/scene.splinecode" className="w-full h-full " />
+
+      <!-- <MissionSpline client:only="react" /> -->
     </div>
   </section>
 </section>

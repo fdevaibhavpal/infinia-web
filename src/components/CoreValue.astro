@@ -1,14 +1,73 @@
 ---
-import CoreValueSpline from "./spline/CoreValueSpline";
+import Collaboration from "./icons/Collaboration.astro";
+import InnovationIcon from "./icons/InnovationIcon.astro";
+import SustainabilityIcon from "./icons/SustainabilityIcon.astro";
+import TrustIcon from "./icons/TrustIcon.astro";
+import LazySpline from "./LazySpline.astro";
+import LazySplineLoader from "./spline/LazySplineLoader.astro";
 ---
 
-<section>
-  <section class="w-full bg-black text-white">
-    <div class="w-full overflow-hidden">
-      <!-- <CoreValueSpline client:only="react"  /> -->
-  
-      <spline-viewer url="https://prod.spline.design/XOnXjuLehMuoP9t3/scene.splinecode" ></spline-viewer> 
+<section class="relative w-full md:h-[700px] overflow-hidden ">
+     <!-- <div class="absolute inset-0 bg-white/30"></div> -->
+  <!-- Background Spline Animation -->
+  <!-- <div class="absolute inset-0 w-full h-full z-0">
+    <LazySpline splineUrl="https://prod.spline.design/XOnXjuLehMuoP9t3/scene.splinecode" />
+
+ 
+  </div> -->
+   <!-- Background Spline Animation -->
+   <div class="absolute inset-0 w-full h-full z-0">
+    <LazySplineLoader splineUrl="https://prod.spline.design/XOnXjuLehMuoP9t3/scene.splinecode" className="w-full h-full cursor-pointer" />
+  </div>
+
+  <!-- Foreground Content -->
+  <div class="relative z-10 container mx-auto px-6 py-20 md:py-32">
+    <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-black">
+      Core Values
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-black">
+
+     <!-- Left side values -->
+<div class="space-y-10">
+  <div class="flex items-start gap-4 space-y-16">
+    <InnovationIcon />
+    <div>
+      <h3 class="text-2xl font-semibold mb-1">Innovation & Excellence</h3>
+      <p class="text-gray-700">Building future-ready platforms that leverage AI, Web3.0, and cloud technologies.</p>
+    </div>
+  </div>
+
+  <div class="flex items-start gap-4 space-y-16">
+    <SustainabilityIcon />
+    <div>
+      <h3 class="text-2xl font-semibold mb-1">Sustainability & Inclusion</h3>
+      <p class="text-gray-700">Promoting ethical AI, green computing, and inclusive digital transformation.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Right side values -->
+<div class="space-y-10">
+  <div class="flex items-start gap-4 space-y-16">
+    <Collaboration />
+    <div>
+      <h3 class="text-2xl font-semibold mb-1">Collaboration & Growth</h3>
+      <p class="text-gray-700">Driving cross-industry partnerships and fostering digital economic growth.</p>
+    </div>
+  </div>
+
+  <div class="flex items-start gap-4 space-y-16">
+    <TrustIcon />
+    <div>
+      <h3 class="text-2xl font-semibold mb-1">Trust & Transparency</h3>
+      <p class="text-gray-700">Upholding accountability in governance and operations.</p>
+    </div>
+  </div>
+</div>
 
     </div>
-  </section>
+  </div>
+
 </section>
+

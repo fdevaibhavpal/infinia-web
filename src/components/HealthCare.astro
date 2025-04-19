@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import HealthcareImage from '../../public/assets/healthcare.svg';
+import LazySpline from './LazySpline.astro';
 ---
 
 
@@ -17,11 +18,12 @@ import HealthcareImage from '../../public/assets/healthcare.svg';
       
       <div class="w-full lg:w-1/2 relative">
         <div class="relative w-full aspect-square  overflow-hidden">
-          <spline-viewer
+          <LazySpline splineUrl="https://prod.spline.design/4lP3sSHEY4UwWOQd/scene.splinecode" />
+          <!-- <spline-viewer
             url="https://prod.spline.design/4lP3sSHEY4UwWOQd/scene.splinecode"
             class="w-full h-full "
            
-          ></spline-viewer>
+          ></spline-viewer> -->
         </div>
       </div>
     </div>

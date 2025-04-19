@@ -1,0 +1,48 @@
+---
+const { splineUrl } = Astro.props;
+---
+
+<div class="relative w-full h-full overflow-hidden">
+  <div class="spline-container w-full h-full" data-spline-url={splineUrl}>
+    <div class="spline-loader absolute inset-0 flex items-center justify-center bg-gray-900">
+      <span class="text-white animate-pulse"></span>
+    </div>
+  </div>
+</div>
+
+
+
+<script type="module" is:inline>
+  import "https://unpkg.com/@splinetool/viewer@1.9.82/build/spline-viewer.js";
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    for (const entry of entries) {
+      if (entry.isIntersecting) {
+        const container = entry.target;
+        if (!container.dataset.loaded) {
+          const splineUrl = container.dataset.splineUrl;
+          const viewer = document.createElement('spline-viewer');
+          viewer.setAttribute('url', splineUrl);
+          viewer.style.width = '100%';
+          viewer.style.height = '100%';
+          viewer.style.pointerEvents = 'none';
+          viewer.style.background = 'transparent';
+
+          container.appendChild(viewer);
+          container.dataset.loaded = 'true';
+
+          const loader = container.querySelector('.spline-loader');
+          if (loader) loader.remove();
+        }
+        observer.unobserve(container);
+      }
+    }
+  }, {
+    rootMargin: '200px',
+    threshold: 0.1,
+  });
+
+  document.querySelectorAll('.spline-container').forEach((el) => {
+    observer.observe(el);
+  });
+</script>
