@@ -7,14 +7,14 @@ export default function SplineViewer() {
     if (!canvas) return;
 
     const app = new Application(canvas);
-    app.load('https://prod.spline.design/FvKOzox03XjKLkPn/scene.splinecode');
+    app.load('https://prod.spline.design/cdtnukmPpFdeLtoF/scene.splinecode');
   }, []);
 
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative w-full h-full overflow-hidden">
       <canvas
         id="canvas3d"
-        className="w-full h-full block pointer-events-none"
+        className="w-full h-full block "
       />
     </div>
   );

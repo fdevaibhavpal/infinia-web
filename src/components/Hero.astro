@@ -1,6 +1,7 @@
 ---
 import LazySpline from './LazySpline.astro';
 import HeroSpline from './spline/HeroSpline';
+import HeroSplineLoader from './spline/HeroSplineLoader';
 import LazySplineLoader from './spline/LazySplineLoader.astro';
 ---
 
@@ -8,25 +9,25 @@ import LazySplineLoader from './spline/LazySplineLoader.astro';
   <section
     class="w-full bg-black text-white "
   >
-  <div class="w-full h-full overflow-hidden">
+  <div class="w-full h-full ">
     <!-- <HeroSpline client:only="react" /> -->
     <!-- <LazySpline splineUrl="https://prod.spline.design/cdtnukmPpFdeLtoF/scene.splinecode" /> -->
-    <LazySplineLoader splineUrl="https://prod.spline.design/cdtnukmPpFdeLtoF/scene.splinecode" className="w-full h-full " priority={true} />
-
-    <!-- <spline-viewer url="https://prod.spline.design/cdtnukmPpFdeLtoF/scene.splinecode"></spline-viewer> -->
+    <!-- <LazySplineLoader splineUrl="https://prod.spline.design/cdtnukmPpFdeLtoF/scene.splinecode" className="w-full h-full " priority={true} /> -->
+    <HeroSplineLoader client:only="react"  splineUrl="https://prod.spline.design/cdtnukmPpFdeLtoF/scene.splinecode" />
+    <!-- <HeroSplineLoader client:only="react"  splineUrl="https://prod.spline.design/pRFePdQb68k3e7mU/scene.splinecode" /> -->
   </div>
     <div class="container mx-auto text-center">
       <div class="flex flex-col items-center justify-center">
        
         <h1
-          class="text-xl md:text-2xl lg:text-4xl font-bold tracking-wide mt-16"
+          class="text-xl md:text-4xl lg:text-6xl font-bold tracking-wide mt-16"
         >
           <span
             class="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-blue-500 to-green-400"
             >Powering</span
           >
           <span
-            class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-green-400"
+            class="font-lato bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-green-400"
           >
             Sovereign</span
           >
