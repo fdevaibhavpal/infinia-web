@@ -27,7 +27,7 @@
     const visionCircleText = document.querySelector(".circle-text.vision");
     const missionCircleText = document.querySelector(".circle-text.mission");
   
-    const transitionDuration = 5000;
+    const transitionDuration = 8000;
     let isVision = true;
   
     function toggleState() {
@@ -60,8 +60,8 @@
     --ring-color-normal: #F6D063;
     --text-color: #fefefe;
     --background-color: #000000;
-    --transition-duration: 5s;
-    --fade-duration: 1.5s;
+    --transition-duration: 7s;
+    --fade-duration: 2s;
   }
   
   .vision-mission {
@@ -160,8 +160,7 @@
     transform: translateY(0);
   }
   
-  /* RESPONSIVE PART */
- /* RESPONSIVE PART - FIXED */
+ /* RESPONSIVE PART*/
 @media (max-width: 768px) {
   .vision-mission {
     height: 90;
@@ -172,7 +171,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 3rem;
+    gap: 2rem;
   }
 
   .circle-container {
@@ -191,7 +190,7 @@
     text-align: center;
     font-size: 1.1rem;
     padding: 0 1rem;
-    height: 120px; /* Fixed height to prevent jumping */
+    height: 120px; 
     position: relative;
   }
 
@@ -232,7 +231,7 @@
 
   .content-container {
     font-size: 1rem;
-    height: 160px; /* More height for smaller screens */
+    height: 160px;
   }
 }
  
