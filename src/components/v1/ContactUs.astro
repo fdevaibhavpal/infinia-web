@@ -1,0 +1,58 @@
+---
+import LazySpline from "./LazySpline.astro";
+import LazySplineLoader from "../spline/LazySplineLoader.astro";
+---
+
+<!-- <section>
+  <section class="w-full bg-black text-white">
+    <div class="w-full overflow-hidden">
+      <ContactSpline client:only="react"  />
+      <LazySpline splineUrl="https://prod.spline.design/AWrdajc2kHGHKQt5/scene.splinecode" />
+      <spline-viewer url="https://prod.spline.design/AWrdajc2kHGHKQt5/scene.splinecode"></spline-viewer>
+    </div>
+  </section>
+</section> -->
+
+<section class="relative w-full  overflow-hidden">
+  <!-- Background Spline Animation -->
+  <div class="absolute inset-0 w-full h-full z-0">
+    <!-- <LazySpline splineUrl="https://prod.spline.design/AWrdajc2kHGHKQt5/scene.splinecode" /> -->
+    <!-- <div class="absolute inset-0 bg-white/40"></div> -->
+    <LazySplineLoader splineUrl="https://prod.spline.design/AWrdajc2kHGHKQt5/scene.splinecode" className="w-full h-full " />
+  </div>
+
+  <!-- Content Overlay -->
+  <div class="relative z-10 container mx-auto px-6 py-20 md:py-32 flex flex-col md:flex-row items-center justify-between h-full">
+    <!-- Left Side Text and Input -->
+    <div class="w-full md:w-1/2 text-center md:text-left space-y-6">
+      <h2 class="text-3xl md:text-5xl font-bold leading-tight">
+        Be the Next One <br /> in Our List
+      </h2>
+      <p class="text-gray-700 text-base md:text-lg max-w-md">
+        Let’s explore how Infinia can support your digital transformation journey.
+      </p>
+
+      <!-- Email Input + Send Button -->
+      <form class="flex flex-col sm:flex-row items-center sm:items-start gap-4 max-w-md mt-6">
+        <input
+          type="email"
+          placeholder="Email@example.com"
+          class="w-full px-4 py-3 border-2 border-purple-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
+          required
+        />
+        <button
+          type="submit"
+          class="px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-medium transition"
+        >
+          Send
+        </button>
+      </form>
+    </div>
+
+    <!-- Right Side Empty to let Spline show -->
+    <div class="hidden md:block w-full md:w-1/2 h-[400px]"></div>
+
+  </div>
+</section>
+
+

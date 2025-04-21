@@ -1,0 +1,74 @@
+---
+import { Image } from 'astro:assets';
+import ContactSpline from '../spline/ContactSpline';
+import LazySplineLoader from '../spline/LazySplineLoader.astro';
+---
+
+<script type="module" is:inline>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const statItems = document.querySelectorAll(".stat-item");
+
+    gsap.from(statItems, {
+      opacity: 0,
+      y: 30,
+      stagger: 0.2,
+      duration: 1,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".stats-wrapper",
+        start: "top 80%",
+      },
+    });
+  });
+</script>
+
+<section class="bg-black text-white py-20 relative overflow-hidden">
+  <div class="container max-w-[1020px] mx-auto px-6 ">
+
+    <!-- Top Text -->
+    <div class="max-w-4xl mx-auto text-center mb-20">
+      <p class="text-xl md:text-2xl lg:text-3xl leading-snug">
+        At Infinia, we unify specialized tech firms to create secure, inclusive, and intelligent platforms that redefine how governments and societies interact with digital systems.
+      </p>
+    </div>
+
+    <!-- Stats Section -->
+    <div class="max-w-[900px] mx-auto stats-wrapper flex flex-col md:flex-row flex-wrap justify-center items-center gap-8 md:gap-16 lg:gap-24 mb-2">
+
+      <!-- Single Stat -->
+      <div class=" flex flex-col md:flex-row text-center items-center stat-item ">
+        <p class="text-5xl md:text-6xl font-bold mb-0 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-400">
+          10+
+        </p>
+        <p class="text-lg md:text-xl text-gray-300 md:ml-2 mt-2 md:mt-0 self-end">Countries</p>
+      </div>
+
+      <div class=" flex flex-col md:flex-row text-center  items-center stat-item ">
+        <p class="text-5xl md:text-6xl font-bold mb-0 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-500">
+          500+
+        </p>
+        <p class="text-lg md:text-xl text-gray-300 md:ml-2 mt-2 md:mt-0 self-end">Employees</p>
+      </div>
+
+      <div class=" flex flex-col md:flex-row text-center  items-center stat-item ">
+        <p class="text-5xl md:text-6xl font-bold mb-0 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-400">
+          6
+        </p>
+        <p class="text-lg md:text-xl text-gray-300 md:ml-2 mt-2 md:mt-0 self-end">Subsidiaries</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Spline Animation at Bottom -->
+  <div class="w-full h-[350px] overflow-hidden pb-6">
+    <LazySplineLoader splineUrl="https://prod.spline.design/H-GRvrVsdEQpn8lz/scene.splinecode" className="w-full h-full" />
+  </div>
+
+</section>

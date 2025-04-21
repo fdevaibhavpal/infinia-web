@@ -1,0 +1,38 @@
+---
+import { Image } from "astro:assets";
+import LazySplineLoader from "../spline/LazySplineLoader.astro";
+import footerBg from "../../../public/assets/footer-bg.svg";
+---
+
+<section class="relative w-full bg-black text-white overflow-hidden">
+  
+
+   <!-- Background Image -->
+   <div class="absolute inset-0 w-full aspect-square h-full z-0">
+    <Image 
+      src={footerBg} 
+      alt="Footer Background" 
+      class="w-full h-full object-cover" 
+      loading="eager" 
+      decoding="async"
+    />
+    <!-- Optional: Dark Transparent Overlay -->
+    <div class="absolute inset-0 bg-black/50"></div>
+  </div>
+
+  <!-- Text Content Overlay -->
+  <div class="relative z-10 flex flex-col items-center md:items-end justify-center h-full container mx-auto px-6 py-20 md:py-32">
+    <div class="max-w-lg text-center md:text-right">
+      <h2 class="text-3xl md:text-5xl font-bold leading-tight mb-6">
+        Let’s Build the <br class="hidden md:block" /> Future Together
+      </h2>
+      <p class="text-gray-300 text-base md:text-lg mb-8">
+        Connect with our team to learn more about our solutions, services, or partnership opportunities.
+      </p>
+      <button class="px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg text-white text-lg font-medium transition">
+        Contact Us
+      </button>
+    </div>
+  </div>
+
+</section>

@@ -1,0 +1,59 @@
+---
+import LazySpline from './LazySpline.astro';
+import HeroSpline from '../spline/HeroSpline';
+import HeroSplineLoader from '../spline/HeroSplineLoader';
+import LazySplineLoader from '../spline/LazySplineLoader.astro';
+import { Image } from 'astro:assets';
+import infiniaLogo from '../../../public/assets/infinia-logo.svg';
+---
+
+<section>
+  <section
+    class="relative w-full bg-black text-white overflow-hidden min-h-screen flex flex-col items-center justify-center px-4 "
+  >
+  <div class=" inset-0 w-full h-full ">
+  <LazySplineLoader 
+    splineUrl="https://prod.spline.design/cdtnukmPpFdeLtoF/scene.splinecode" 
+    className="absolute inset-0 w-full h-full" 
+  />
+</div>
+<!-- <div class="relative z-10 w-[180px] md:w-[220px] lg:w-[260px] mb-8">
+  <Image 
+    src={infiniaLogo} 
+    alt="Infinia Logo" 
+    class="w-full h-auto object-contain" 
+    loading="eager" 
+    decoding="async"
+  />
+</div> -->
+ 
+    <div class="container mx-auto text-center">
+      <div class="flex flex-col items-center justify-center">
+       
+        <h1
+          class="text-xl md:text-4xl lg:text-6xl font-bold tracking-wide mt-10 mb-8"
+        >
+          <span
+            class="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-blue-500 to-green-400"
+            >Powering</span
+          >
+          <span
+            class="font-lato bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-green-400"
+          >
+            Sovereign</span
+          >
+          <span
+            class="bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-yellow-300"
+          >
+            Digital</span
+          >
+          <span
+            class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-green-300"
+          >
+            Futures</span
+          >
+        </h1>
+      </div>
+    </div>
+  </section>
+</section>

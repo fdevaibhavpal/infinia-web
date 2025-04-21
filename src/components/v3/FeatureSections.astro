@@ -1,0 +1,58 @@
+---
+import DynamicFeatureCard from "../common/FeatureCard.astro";
+import earthImage from "../../../public/assets/earth.svg";
+import aiRobot from "../../../public/assets/ai-robot.svg";
+import cloud from "../../../public/assets/cloud.svg";
+import BlockChain from '../../../public/assets/blockchain.svg';
+import Healthcare from '../../../public/assets/healthcare.svg';
+
+const sections = [
+  {
+    number: "01",
+    title: "Sovereign Infrastructure",
+    description: "Infinia builds sovereign digital infrastructure that gives nations full control over data, cloud, and AI systems ensuring privacy, compliance, and independence.",
+    image: earthImage,
+    reverse: false,
+  },
+  {
+    number: "02",
+    title: "Artificial Intelligence",
+    description: "We power real-time decision-making and automation with AI-driven platforms for governance, healthcare, finance, and more boosting efficiency and insight.",
+    image: aiRobot,
+    reverse: true,
+  },
+  {
+    number: "03",
+    title: "Cloud",
+    description: "Our secure, scalable cloud infrastructure is designed for national resilience supporting mission-critical public services and smart city operations.",
+    image: cloud,
+    reverse: false,
+  },
+  {
+    number: "04",
+    title: "Blockchain",
+    description: "From e-invoicing to digital identity, Infinia uses blockchain to ensure transparency, security, and trust in government and enterprise systems.",
+    image: BlockChain,
+    reverse: true,
+  },
+  {
+    number: "05",
+    title: "Healthcare",
+    description: "We digitize healthcare end-to-end with patient-first platforms for insurance, hospitals, analytics, and telemedicine  all built on secure, interoperable tech.",
+    image: Healthcare,
+    reverse: false,
+  },
+];
+---
+
+
+  {sections.map((section) => (
+    <DynamicFeatureCard 
+      number={section.number}
+      title={section.title}
+      description={section.description}
+      image={section.image}
+      reverse={section.reverse}
+    />
+  ))}
+

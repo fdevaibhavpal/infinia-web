@@ -1,0 +1,41 @@
+---
+import LazySpline from "./LazySpline.astro";
+import LazySplineLoader from "../spline/LazySplineLoader.astro";
+---
+
+
+<section class="relative w-full bg-black text-white overflow-hidden min-h-[600px] md:min-h-[700px]">
+
+  <div class="absolute inset-0 w-full h-full hidden md:block">
+        <!-- <LazySpline
+        splineUrl="https://prod.spline.design/OYEb4QkljWEC7fkh/scene.splinecode"
+      /> -->
+      <LazySplineLoader 
+        splineUrl="https://prod.spline.design/OYEb4QkljWEC7fkh/scene.splinecode" 
+        className="w-full h-full" 
+      />
+  </div>
+
+  <div class="relative w-full h-full flex md:hidden items-center justify-center px-6 py-20">
+    <div class="flex flex-col gap-10 text-center">
+
+      <!-- Mission -->
+      <div class="w-full">
+        <h2 class="text-4xl font-bold mb-4">Mission.</h2>
+        <p class="text-gray-300 text-base leading-relaxed">
+          To empower nations and industries with sovereign, AI-powered platforms that transform governance, healthcare, and public services for a secure and inclusive future.
+        </p>
+      </div>
+
+      <!-- Vision -->
+      <div class="w-full">
+        <h2 class="text-4xl font-bold mb-4">Vision</h2>
+        <p class="text-gray-300 text-base leading-relaxed">
+          To be the world’s most trusted technology partner for building resilient, citizen-first digital ecosystems that shape the future of governments and economies.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+</section>

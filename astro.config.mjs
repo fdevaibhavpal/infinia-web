@@ -10,6 +10,9 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
+  experimental: {       
+    fonts: [],       
+  },
 
   integrations: [react()]
 });

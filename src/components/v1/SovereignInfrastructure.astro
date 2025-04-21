@@ -1,0 +1,40 @@
+---
+import { Image } from "astro:assets";
+import earthImage from "../../public/assets/earth.svg";
+import LazySpline from "./LazySpline.astro";
+import LazySplineLoader from "../spline/LazySplineLoader.astro";
+---
+
+<section class="bg-black text-white py-6 lg:py-12 overflow-hidden">
+  <div class="w-full mx-auto px-8 lg:px-12">
+    <div class="flex flex-col lg:flex-row items-center">
+      <div class="w-full lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+        <p class="text-purple-500 text-xl mb-4 font-medium">01</p>
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8">
+          Sovereign Infrastructure
+        </h2>
+        <p class="text-lg md:text-xl text-gray-300 leading-relaxed">
+          Infinia builds sovereign digital infrastructure that gives nations
+          full control over data, cloud, and AI systems ensuring privacy,
+          compliance, and independence.
+        </p>
+      </div>
+
+      <div class="w-full lg:w-1/2 relative">
+        <div class="relative w-full aspect-square overflow-hidden">
+          <!-- <LazySpline splineUrl="https://prod.spline.design/LEfqtCvUyXFuhrhp/scene.splinecode" /> -->
+          <LazySplineLoader
+            splineUrl="https://prod.spline.design/LEfqtCvUyXFuhrhp/scene.splinecode"
+            className="w-full h-full "
+          />
+
+          <!-- <spline-viewer
+            url="https://prod.spline.design/LEfqtCvUyXFuhrhp/scene.splinecode"
+            class="w-full h-full"
+          ></spline-viewer> -->
+          <!-- <div class="absolute inset-0 rounded-full bg-blue-500 opacity-20 blur-3xl -z-10"></div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

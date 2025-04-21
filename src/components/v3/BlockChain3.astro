@@ -1,0 +1,33 @@
+---
+import { Image } from 'astro:assets';
+import BlockChain from '../../../public/assets/blockchain.svg';
+---
+
+<section class="bg-black text-white py-6 lg:py-12 overflow-hidden">
+  <div class="w-full mx-auto lg:px-12">
+    <div class="flex flex-col lg:flex-row-reverse items-center">
+      <div class="w-full px-8 lg:w-1/2 mb-12 lg:mb-0 lg:pl-12">
+        <p class="text-purple-500 text-xl mb-4 font-medium">04</p>
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8">
+          Blockchain
+        </h2>
+        <p class="text-lg md:text-xl text-gray-300 leading-snug">
+          From e-invoicing to digital identity, Infinia uses blockchain to ensure transparency, security, and trust in government and enterprise systems.
+
+        </p>
+      </div>
+
+      <div class="w-full lg:w-1/2 relative">
+        <div class="relative w-full md:rounded-full aspect-square overflow-hidden">
+          <Image 
+            src={BlockChain} 
+            alt="BlockChain" 
+            class="absolute inset-0 w-full h-full object-contain" 
+            loading="eager" 
+            decoding="async"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
