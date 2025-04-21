@@ -10,7 +10,7 @@ type LazySplineLoaderProps = {
 };
 
 export default function LazySplineLoader({ splineUrl, canvasId, className = 'w-full h-full',priority = false  }: LazySplineLoaderProps) {
-  const { ref, isInView } = useInView({ rootMargin: '200px', threshold: 0.1 });
+  const { ref, isInView } = useInView({ rootMargin: '20px', threshold: 0.05 });
   const [app, setApp] = useState<Application | null>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 

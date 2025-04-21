@@ -10,29 +10,26 @@ import "../styles/global.css";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>Infinia Web</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-  <!-- <link rel="preload" href="https://prod.spline.design/cdtnukmPpFdeLtoF/scene.splinecode" as="fetch" crossorigin="anonymous" /> -->
   </head>
   <body>
-    
     <slot />
-    <!-- <script type="module" is:inline>
+    <script type="module" is:inline>
       import Lenis from "@studio-freight/lenis";
 
       const lenis = new Lenis({
         smooth: true,
-        lerp: 0.05,
+        lerp: 0.02,
+        smoothTouch: false,
       });
 
       function raf(time) {
         lenis.raf(time);
         requestAnimationFrame(raf);
       }
-
       requestAnimationFrame(raf);
-    </script> -->
+    </script>
   </body>
 </html>
 

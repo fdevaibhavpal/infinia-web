@@ -1,16 +1,35 @@
 ---
-import HeroSpline from "../spline/HeroSpline";
-import HeroSplineLoader from "../spline/HeroSplineLoader";
-import LazySplineLoader from "../spline/LazySplineLoader.astro";
 import { Image } from "astro:assets";
 import infiniaLogo from "../../../public/assets/infinia-logo.svg";
+import infiniaHoldings from "../../../public/assets/infinia-holdings-logo.svg";
 ---
 
 <section
   class="relative w-full bg-[#0B0B0B] text-white overflow-hidden min-h-screen flex flex-col items-center justify-center px-4"
 >
-</section>
-<div class="relative z-10 w-[180px] md:w-[220px] lg:w-[260px] mb-8">
+
+  <!-- Top Navbar -->
+  <div class="absolute top-0 left-0 w-full flex justify-between items-center px-6 md:px-10 lg:px-20 py-6 z-20">
+
+    <div class="md:w-[80px] w-[60px] ">
+      <Image
+        src={infiniaHoldings}
+        alt="infinia Holdings"
+        class="w-full h-auto object-contain"
+        loading="eager"
+        decoding="async"
+      />
+    </div>
+
+    <a
+    href="#contact"
+    class="md:px-10 px-6 py-2 rounded-lg text-white text-lg font-medium border border-white bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-all duration-300 shadow-md"
+  >
+    Contact Us
+  </a>
+  </div>
+
+<div class="relative z-10 w-[180px] md:w-[220px] lg:w-[260px] mt-16">
   <Image
     src={infiniaLogo}
     alt="Infinia Logo"
@@ -23,7 +42,7 @@ import infiniaLogo from "../../../public/assets/infinia-logo.svg";
 <div class="container mx-auto text-center">
   <div class="flex flex-col items-center justify-center">
     <h1
-      class="text-xl md:text-4xl lg:text-6xl font-bold tracking-wide mt-10 mb-8"
+      class="text-xl md:text-4xl lg:text-6xl font-bold tracking-wide md:mt-10 mt-6"
     >
       <span
         class="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-blue-500 to-green-400"
@@ -47,3 +66,4 @@ import infiniaLogo from "../../../public/assets/infinia-logo.svg";
     </h1>
   </div>
 </div>
+</section>
